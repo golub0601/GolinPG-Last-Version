@@ -1,0 +1,65 @@
+.cardP {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.titleT {
+  color: grey;
+  font-size: 18px;
+}
+@media print {
+  * {
+    display: none;
+  }
+  #printableTable {
+    display: block;
+  }
+}
+
+#but {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #337ab7;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.lin {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+#but:hover, a:hover {
+  opacity: 0.7;
+}
+
+#pop{
+ width:470px !important;
+ position:fixed !important;
+ bottom:0% !important;
+ right:30% !important;
+ border:2px solid !important;
+ padding:10px !important; 
+ background-color: #222d32 !important;
+ border-radius:10px !important;
+ display:none;
+}
+#close-pop{
+ right:5px;
+ top:5;
+ float:right;
+ width: 20px;
+ height: 20px;
+ background-color: #f2cd29;
+ padding: 5px;
+ border-radius: 15px;
+}

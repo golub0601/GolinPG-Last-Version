@@ -1,0 +1,47 @@
+#edit-about{
+  width: 450px;
+  max-width: 50%;
+  max-height: 60%;
+  position:fixed;
+  z-index: 1060;
+  bottom:5%;
+  right:20%;
+  border:2px solid;
+  padding:10px;
+  background-color:black;
+  border-radius:10px;
+   overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.content-field{
+  padding: 4px;
+	margin-top: 10px;
+	resize: none;
+	width: 100% !important;
+	min-height: 200px;
+	word-break: normal;
+  font-size: 18px;
+}
+
+#close-edit_about{
+ right:5px;
+ top:5;
+ float:right;
+ width: 25px;
+ height: 25px;
+ background-color: #f2cd29;
+ padding: 5px;
+ border-radius: 15px;
+}
+.form-text-input{
+   max-width: 90%;
+}
+
+#edit-client {
+ background-color: #f2cd29;
+}
+
+
+
+
