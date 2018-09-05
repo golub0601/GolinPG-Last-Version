@@ -18,7 +18,7 @@
  	else{
  		echo "<script>
 				 alert('OFFICE DELETED!');
-				 window.location.href='../offices.php';
+				 window.location.href='offices.php';
 			  </script>";
 
  	}
