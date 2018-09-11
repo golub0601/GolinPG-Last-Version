@@ -4,18 +4,23 @@
 
 <?php //changing password
   if (isset($_POST['submit_password'])) {
-    if ($_POST['old_password'] == $_SESSION['admin_password']) {
+    
+    
+    
+    if (password_verify($_POST['old_password'], $_SESSION['admin_password'])) {
       if ($_POST['new_password'] !== $_POST['password_again']) {
-        $message = "Passwords do not match.\\nTry again.";
+        $message = "Fields for new password do not match.\\n Please try again.";
         echo "<script type='text/javascript'>alert('$message');</script>";        
       }
       else {
-        $new_password = $_POST['new_password'];
+
+        $new_password = password_hash($_POST['new_password'],PASSWORD_BCRYPT, array('cost' => 12));
+
         $admin_id = $_SESSION['admin_id'];
         $query = "UPDATE admins SET password = '$new_password' WHERE id = $admin_id ";
         $send_query = mysqli_query($connection, $query);
         $_SESSION['admin_password'] = $new_password;
-        $message = "New password set.";
+        $message = "New password is set.";
         echo "<script type='text/javascript'>alert('$message');</script>";
       }
     }

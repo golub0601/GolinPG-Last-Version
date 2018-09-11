@@ -42,7 +42,7 @@
             $mail->SetFrom("golinpgolubovic@gmail.com");
             $mail->Subject = "GolinPG new meeting request";
             $mail->Body = "Hi, You are one of admins from GolinPG and we have new request for meeting. Check it.";
-            $mail->AddAddress("jelena.jankovic@amplitudo.me");
+            $mail->AddAddress("golub0601@gmail.com");
             
             if(!$mail->Send()) {
                 // echo "Mailer Error: " . $mail->ErrorInfo;

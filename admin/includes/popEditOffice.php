@@ -18,6 +18,7 @@
   ?>
 
                 <tr id="edit-client">
+                  
                     <!-- form to edit office -->
                     <!-- ========== -->
                     <form action="includes/editOffice.php" method="post" enctype="multipart/form-data">
