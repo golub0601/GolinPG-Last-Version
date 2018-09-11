@@ -15,7 +15,7 @@
   	$select_user_query = mysqli_query($connection,$query);
 
   	if (!$select_user_query) {
-  		echo 'Shit happend';
+  		echo 'Login failed , please try again.';
   	}
 
   	while ($row = mysqli_fetch_array($select_user_query)) {
@@ -28,8 +28,8 @@
   	}
 
   	if ($email === $email_from_db){
-  			if ($password === $password_from_db){
-          //storig admin info in session
+  			if (password_verify($password, $password_from_db)){
+          //storing admin info in session
           $_SESSION['admin_name'] = $name_from_db;
           $_SESSION['admin_password'] = $password_from_db;
           $_SESSION['admin_email'] = $email_from_db;
@@ -40,7 +40,7 @@
 	  		}
 	  		else{
 	  		    echo "<script>
-                    alert('Wrong Password!');
+                    alert('Wrong Password!Please try again.');
                     window.location.href='../login.php';
                   </script>";
 	  		}
