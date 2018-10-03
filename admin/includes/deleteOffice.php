@@ -16,10 +16,7 @@
  		die(mysqli_error($connection));
  	}
  	else{
- 		echo "<script>
-				 alert('OFFICE DELETED!');
-				 window.location.href='offices.php';
-			  </script>";
+ 		header('Location:  offices.php?deleted=1');
 
  	}
  }

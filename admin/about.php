@@ -6,6 +6,11 @@
    session_start(); 
    ob_start();
 ?>
+<?php if (isset($_SESSION['admin_name'])) {
+  
+?>
+
+
 
 
 <?php include 'includes/head.php'; ?>
@@ -75,7 +80,14 @@
 
     <!-- Main content -->
     <section class="content container">
-
+      <!-- notif -->
+<?php if(isset($_GET['edited'])){
+        echo '<div class="alert alert-success alert-dismissible fade in" style="margin:20px; margin-right:120px; margin-left: -10px;">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                 Section has been edited.
+              </div>';
+     }
+?>
       <?php include 'includes/popEditAboutSection.php'; ?>
          <div class="row container">
             <?php
@@ -101,3 +113,11 @@
     </section>
     <!-- /.content -->
  <?php include 'includes/footer.php'; ?>
+
+
+<?php 
+}
+else{
+  header('Location: ../login.php');
+}
+?>

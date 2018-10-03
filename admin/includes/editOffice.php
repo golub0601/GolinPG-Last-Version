@@ -20,26 +20,16 @@
                   
 
                         if (file_exists($target_path)) {
-                          echo " <script>
-                                  alert('That name of image exist! Change name or check does that office alredy exists.');
-                                    window.location.href='../offices.php';
-                                 </script>";
+                         header('Location:  ../offices.php?added=0&err=exist');
                             }
         
                           
                         if ($_FILES["office_image"]["size"] > 500000) {
-	                 
-        	                 echo "<script>
-        	                 		alert('That image is too big!');
-        	                 		window.location.href='../offices.php';
-        	               		  </script>";
+	                 header('Location:  ../offices.php?added=0&err=big');
         	                } 
                          
                         if($fileType != "jpg" && $fileType != "png" && $fileType != "jpeg" && $fileType != "gif" ) {
-                              echo "<script>
-                                   	alert('That image is not png, jpg, gif or jpeg!');
-                                    window.location.href='../offices.php';        
-                                 	  </script>";
+                              header('Location:  ../offices.php?added=0&err=notimg');
                           }
                     
                         
@@ -68,10 +58,7 @@
                   if (!$edit) {
                       die('No Edit Allowed! Because : <br>' . mysqli_error($connection));
                   }      
-                   echo "<script>
-                            alert('OFFICE HAS BEEN EDITED!');
-                            window.location.href='../offices.php';
-                         </script>";
+                   header('Location:  ../offices.php?edited=1');
                                    
                 } 
                                

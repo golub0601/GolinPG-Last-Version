@@ -16,33 +16,19 @@
   
   if(isset($_POST['add_client'])){
   	if (!$check) {
-  		// echo "NOT an IMAGE!" ;
-  		echo " <script>
-				 alert('That is not an Image!');
-				 window.location.href='../clients.php';
-			   </script>";
+  		header('Location:  ../clients.php?added=0&err=noimg');
   	}
   	else{
   		if (file_exists($target_path)) {
-    echo " <script>
-				 alert('That name of image exist! Change name or check does that client alredy exist.');
-				 window.location.href='../clients.php';
-		   </script>";
+  header('Location:  ../clients.php?added=0&err=exist');
         }
         else{
         	if ($_FILES["client_image"]["size"] > 1000000) {
-        echo "<script>
-				 alert('That image is too big!');
-				 window.location.href='../clients.php';
-		   </script>";
+        header('Location:  ../clients.php?added=0&err=big');  
             } 
             else{
                  if($fileType != "jpg" && $fileType != "png" && $fileType != "jpeg" && $fileType != "gif" ) {
-				    echo "<script>
-								 alert('That image is not png, jpg, gif or jpeg!');
-					             window.location.href='../clients.php';			 
-						   </script>";
-				    
+               header('Location:  ../clients.php?added=0&err=notimg');   
 				}
 				else{
 					if (move_uploaded_file($_FILES["client_image"]["tmp_name"], $target_path)) {
@@ -54,10 +40,8 @@
             if(!$send_query){
               die(mysqli_error($coonnection));
             }
-						echo "<script>
-									 alert('CLIENT HAS BEEN ADDED!');
-									 window.location.href='../clients.php';
-							   </script>";
+            header('Location:  ../clients.php?added=1');
+						
 							   
 				}
             }

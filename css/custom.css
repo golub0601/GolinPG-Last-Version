@@ -1,8 +1,77 @@
+/*Fonts*/
+/*<==================================================>*/
+@font-face{
+  font-family: "MontserratBlackItalic";
+  src: url('css/fonts/Montserrat/Montserrat-BlackItalic.ttf');
+}
+@font-face{
+  font-family: "MontserratBlack";
+  src: url('css/fonts/Montserrat/Montserrat-Black.otf');
+}
+@font-face{
+  font-family: "MontserratBold";
+  src: url('css/fonts/Montserrat/Montserrat-Bold.ttf');
+}
+@font-face{
+  font-family: "MontserratSemiBold";
+  src: url('css/fonts/Montserrat/Montserrat-SemiBold.otf');
+}
+@font-face{
+  font-family: "MontserratExtraBold";
+  src: url('css/fonts/Montserrat/Montserrat-ExtraBold.otf');
+}
+@font-face{
+  font-family: "FiraSansLight";
+  src: url('css/fonts/Fira Sans/FiraSans-Light.ttf');
+}
+@font-face{
+  font-family: "FiraSansBold";
+  src: url('css/fonts/Fira Sans/FiraSans-Bold.ttf');
+}
+@font-face{
+  font-family: "FiraSansSemiBold";
+  src: url('css/fonts/Fira Sans/FiraSans-SemiBold.ttf');
+}
+@font-face{
+  font-family: "FiraSansRegular";
+  src: url('css/fonts/Fira Sans/FiraSans-Regular.ttf');
+}
+
+/*End of fonts*/
+/*<==================================================>*/
+.montBlackItalic{
+      font-family: "MontserratBlackItalic" !important; 
+}
+.montBlack{
+      font-family: "MontserratBlack" !important; 
+}
+.montBold{
+      font-family: "MontserratBold" !important; 
+}
+.montSemiBold{
+      font-family: "MontserratSemiBold" !important; 
+}
+.montExtraBold{
+      font-family: "MontserratExtraBold" !important; 
+}
+.firaLight{
+      font-family: "FiraSansLight" !important; 
+}
+.firaBold{
+      font-family: "FiraSansBold" !important; 
+}
+.fira{
+      font-family: "FiraSansRegular" !important; 
+}
+.firaSemiBold{
+      font-family: "FiraSansSemiBold" !important; 
+}
+
 .link_nav a{
    color: #f2cd29;
    text-decoration: none;
    align-self: center;
-   font-weight: bold;
+   font-size: 13px !important;
 }
 
 .link_nav a:hover{
@@ -10,7 +79,7 @@
    text-decoration: underline;
    text-decoration-color: #f2cd29;
    align-self: center;
-   font-weight: bold;
+   font-size: 14px !important;
 }
 .back_grad{
    background: rgb(125,126,125); /* Old browsers */
@@ -69,7 +138,7 @@
    color: #f9f8ef;
    font-weight: bold;
    margin: 30px;
-   font-size: 23px;
+   font-size: 22px;
 }
 .title_l{
    font-style: italic;
@@ -130,14 +199,11 @@ background-image: linear-gradient(to right bottom, #1d1d1b, #212321, #262827, #2
 }
 
 .bottom_of_image_city{
-   color: white;
-   font-size: 18px;
-   font-weight: bold;
+   color: #f2cd29;
+   font-size: 16px;
    position: absolute;
    left: 5%;
-   top: 85%;
-   -webkit-text-stroke-width: 0.8px;
-   -webkit-text-stroke-color: black;
+   top: 90%;
 }
 
 .hovereffect h2 {
@@ -164,9 +230,9 @@ background-color: rgb(0,0,0); /* Fallback color */
 background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 #close-met{
- right:-25px;
- top:-40px;
- position: relative;
+ right:-2%;
+ top: -1%;
+ position: absolute;
  width: 25px;
  height: 25px;
  background-color: #f2cd29;
@@ -191,15 +257,17 @@ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
  animation-name: animatetop;
  animation-duration: 0.6s
 }
-@media only screen and (min-width: 995px) {
+@media only screen and (min-width: 1500px) {
     .footer-map{
       position: absolute;
-      height: 360px;
-      min-width: 420px; 
-      top: -5%;
-      left: -40%;
-      margin-bottom: -10%;
-      margin-top: -10%;
+      height: 400px;
+      min-width: 400px; 
+      margin-top: -10.5%;
+    }
+    .footer-map-login{
+      padding: auto;
+      height: 260px;
+      margin:auto;
     }
     #pr_and_com{
       position: relative; 
@@ -231,8 +299,35 @@ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
       margin-top: 30%;
     }
     #back_section{
-      height: 800px;
+      height: 700px;
     }
+}
+/*end media query*/
+.divIndicator{
+  margin: auto;
+  padding: auto;
+}
+.indicator1{
+  border-radius: 50%;
+  background: #f2cd29;
+  width: 25px;
+  height: 25px;
+  margin-left: auto;
+}
+.indicator2{
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+  border: #f2cd29  solid 3px;
+}
+.indicator3{
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+  margin-right: auto;
+  border: #f2cd29  solid 3px;
 }
 
 .modal {

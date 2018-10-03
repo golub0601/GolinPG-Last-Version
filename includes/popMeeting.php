@@ -5,7 +5,7 @@
   <img src="img/GolinPG.svg" alt="" style="margin: auto; height: 10%;">
   <img id="close-met" onclick="document.getElementById('myModal').style.display='none'" src="img/x.svg" alt=""><br>
   <div class="col-sm-12">
-  <h5 style="color: white; text-align: center;">Zakažite sastanak sa nekim od naših poslodavaca</h5>
+  <h5 class="montBlack" style="font-size: 24px; ;color: white; text-align: center;">Zakažite sastanak sa nekim od naših poslodavaca</h5>
   </div>  
   <div class="container">
     <form id="contact" action="index.php" method="post">
@@ -26,7 +26,7 @@
           </div>
         </div>
          <div class="col-xs-3" style="margin: auto; padding: auto; margin-top: 5%">
-                 <input style="font-weight: bold; background-color: #f2cd29; padding-right: 50px; padding-left: 50px;" class="btn" type="submit" name="submit_meeting" value="ZAKAŽI SASTANAK">
+                 <input style="font-weight: bold; background-color: #f2cd29; padding-right: 50px; padding-left: 50px;" class="btn montBlack" type="submit" name="submit_meeting" value="ZAKAŽI SASTANAK">
           </div>
     </form>
 </div>

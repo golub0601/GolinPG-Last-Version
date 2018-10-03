@@ -20,27 +20,17 @@
                   
 
                         if (file_exists($target_path)) {
-                          echo " <script>
-                                  alert('That name of image exist!');
-                                    window.location.href='../pr&em.php';
-                                 </script>";
+                          header('Location: ../pr&em.php?edited=0&err=exist');    
                             }
         
                           
                         if ($_FILES["section_image"]["size"] > 500000) {
-                   
-                           echo "<script>
-                              alert('That image is too big!');
-                              window.location.href='../pr&em.php';
-                              </script>";
+                           header('Location: ../pr&em.php?edited=0&err=big');    
                           } 
                          
                         if($fileType != "jpg" && $fileType != "png" && $fileType != "jpeg" && $fileType != "gif" ) {
-                              echo "<script>
-                                    alert('That image is not png, jpg, gif or jpeg!');
-                                    window.location.href='../pr&em.php';        
-                                    </script>";
-                          }
+                              header('Location: ../pr&em.php?edited=0&err=notimg');    
+                        }
                     
                         
                         else{
@@ -68,10 +58,7 @@
                   if (!$edit) {
                       die('No Edit Allowed! Because : <br>' . mysqli_error($connection));
                   }      
-                   echo "<script>
-                            alert('SECTION  HAS BEEN EDITED!');
-                            window.location.href='../pr&em.php';
-                         </script>";
+                   header('Location: ../pr&em.php?edited=1');
                          
                                    
                 } 

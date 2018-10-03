@@ -3,6 +3,10 @@
 <?php ob_start(); ?>
 
 
+<?php if (isset($_SESSION['admin_name'])) {
+  
+?>
+
 <?php include 'includes/head.php'; ?>
 <title>Admin GolinPG | CLIENTS</title>
 <div class="wrapper">
@@ -69,6 +73,55 @@
     </section>
 
     <!-- Main content -->
+   <!-- notif -->
+     <?php
+     if(isset($_GET['deleted'])){
+        echo '<div class="alert alert-info alert-dismissible fade in" style="margin:20px; margin-right:120px; margin-left:120px;">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                 <h4>Client has been deleted.</h4>
+              </div>';
+     }
+     if(isset($_GET['edited'])){
+        echo '<div class="alert alert-success alert-dismissible fade in" style="margin:20px; margin-right:120px; margin-left:120px;">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                 Client has been edited.
+              </div>';
+     }
+     if(isset($_GET['added'])){
+      if($_GET['added']==1){
+        echo '<div class="alert alert-success alert-dismissible fade in" style="margin:20px; margin-right:120px; margin-left:120px;">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                 Client has been added.
+              </div>';
+       }
+       else{
+        if($_GET['err']=='notimg'){
+            echo '<div class="alert alert-danger alert-dismissible fade in" style="margin:20px; margin-right:120px; margin-left:120px;">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                 That image is not png, jpg, gif or jpeg!
+              </div>';    
+        }
+        if($_GET['err']=='big'){
+            echo '<div class="alert alert-danger alert-dismissible fade in" style="margin:20px; margin-right:120px; margin-left:120px;">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                 Image is too big. Please use another image.
+              </div>';    
+        }
+        if($_GET['err']=='exist'){
+            echo '<div class="alert alert-danger alert-dismissible fade in" style="margin:20px; margin-right:120px; margin-left:120px;">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                 That name of image alredy exist.Please use another image or name.
+              </div>';    
+        }
+       if($_GET['err']=='noimg'){
+        echo '<div class="alert alert-danger alert-dismissible fade in" style="margin:20px; margin-right:120px; margin-left:120px;">
+              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+             That is not an image!
+          </div>';    
+        }
+       }       
+      }
+    ?>
     
     <?php include 'includes/deleteClient.php'; ?>
     <section class="content container-fluid">
@@ -117,7 +170,33 @@
                 <tr>
                   <td style="text-align: center; padding-top: 40px; font-size: 16px;"><?php echo $name; ?></td>
                   <td style="text-align: center;"><img class="responsive" style="height: 120px;" src="../img/Fotke clients/<?php echo $image; ?>" alt=""></td>
-                  <td style="text-align: center; padding-top: 40px;"><a class="btn btn-warning btn-lg" href="clients.php?edit=<?php echo $id ;?>">EDIT</a>   <a class="btn btn-danger btn-lg" href="clients.php?delete=<?php echo $id ;?>">DELETE</a></td>
+                  <td style="text-align: center; padding-top: 40px;">
+                    <a class="btn btn-warning btn-lg" href="clients.php?edit=<?php echo $id ;?>">EDIT</a>   
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#modalToDelete<?php echo $id;?>">
+                      DELETE 
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalToDelete<?php echo $id;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            Do you really want to DELETE <?php echo $name; ?>?
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">NO!</button>
+                            <a href="clients.php?delete=<?php echo $id ;?>" class="btn btn-danger">DELETE</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
                 </tr>
                  <?php } ?>
               </tbody>
@@ -130,3 +209,11 @@
     </section>
     <!-- /.content -->
  <?php include 'includes/footer.php'; ?>
+
+ 
+<?php 
+}
+else{
+  header('Location: ../login.php');
+}
+?>

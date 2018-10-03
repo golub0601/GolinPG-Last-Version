@@ -16,10 +16,7 @@
  		die(mysqli_error($connection));
  	}
  	else{
- 		echo "<script>
- 		             alert('CLIENT DELETED!');
-				     window.location.href='clients.php';
-			  </script>";
+ 		header('Location:  clients.php?deleted=1'); 
  	}
  }
 

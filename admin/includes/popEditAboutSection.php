@@ -44,7 +44,7 @@
                   if (!$edit) {
                       die('No Edit Allowed! Because : <br>' . mysqli_error($connection));
                   }
-                  header("Location: about.php");
+                  header("Location: about.php?edited=1");
               }
                ?>
 <!--=========== end of pop up about us section =======-->

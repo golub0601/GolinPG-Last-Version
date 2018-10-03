@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 05, 2018 at 10:28 PM
+-- Generation Time: Oct 03, 2018 at 06:23 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -40,7 +40,7 @@ CREATE TABLE `about_us` (
 --
 
 INSERT INTO `about_us` (`id`, `title`, `content`, `img_source`) VALUES
-(1, 'EXPLORERS', 'Asa  onsectetur adipisicing elit. Repellendus similique, nisi quisquam ullam est facilis perferendis optio esse temporibus, magni blanditiis totam voluptates minus fugit! Ipsa repellendus quaerat, debitis enim earum magnam, consequatur explicabo, rem esse nesciunt pariatur temporibus sunt, aperiam incidunt. Tempora totam, ea rerum sit. Cum, sequi, delectus? Perspiciatis voluptate sit repellendus architecto optio reprehenderit rem voluptatibus mollitia at cumque rerum voluptatem nesciunt aliquam, vero ad, repudiandae nisi quibusdam ex amet voluptates. Sed possimus maiores illum expedita doloribus ab pariatur accusamus eligendi quis veritatis ea et fuga reprehenderit dolores id quibusdam, optio itaque aut harum qui maxime sunt.', 'krug1.png'),
+(1, 'EXPLORERS', 'Aponsectetur adipisicing elit. Repellendus similique, nisi quisquam ullam est facilis perferendis optio esse temporibus, magni blanditiis totam voluptates minus fugit! Ipsa repellendus quaerat, debitis enim earum magnam, consequatur explicabo, rem esse nesciunt pariatur temporibus sunt, aperiam incidunt. Tempora totam, ea rerum sit. Cum, sequi, delectus? Perspiciatis voluptate sit repellendus architecto optio reprehenderit rem voluptatibus mollitia at cumque rerum voluptatem nesciunt aliquam, vero ad, repudiandae nisi quibusdam ex amet voluptates. Sed possimus maiores illum expedita doloribus ab pariatur accusamus eligendi quis veritatis ea et fuga reprehenderit dolores id quibusdam, optio itaque aut harum qui maxime sunt.', 'krug1.png'),
 (2, 'CREATORS', 'Aa dpokmks Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus similique, nisi quisquam ullam est facilis perferendis optio esse temporibus, magni blanditiis totam voluptates minus fugit! Ipsa repellendus quaerat, debitis enim earum magnam, consequatur explicabo, rem esse nesciunt pariatur temporibus sunt, aperiam incidunt. Tempora totam, ea rerum sit. Cum, sequi, delectus? Perspiciatis voluptate sit repellendus architecto optio reprehenderit rem voluptatibus mollitia at cumque rerum voluptatem nesciunt aliquam, vero ad, repudiandae nisi quibusdam ex amet voluptates. Sed possimus maiores illum expedita doloribus ab pariatur accusamus eligendi quis veritatis ea et fuga reprehenderit dolores id quibusdam, optio itaque aut harum qui maxime sunt.', 'krug2.png'),
 (3, 'CONNECTORS', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus similique, nisi quisquam ullam est facilis perferendis optio esse temporibus, magni blanditiis totam voluptates minus fugit! Ipsa repellendus quaerat, debitis enim earum magnam, consequatur explicabo, rem esse nesciunt pariatur temporibus sunt, aperiam incidunt. Tempora totam, ea rerum sit. Cum, sequi, delectus? Perspiciatis voluptate sit repellendus architecto optio reprehenderit rem voluptatibus mollitia at cumque rerum voluptatem nesciunt aliquam, vero ad, repudiandae nisi quibusdam ex amet voluptates. Sed possimus maiores illum expedita doloribus ab pariatur accusamus eligendi quis veritatis ea et fuga reprehenderit dolores id quibusdam, optio itaque aut harum qui maxime sunt.', 'krug3.png'),
 (4, 'CATALYST', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus similique, nisi quisquam ullam est facilis perferendis optio esse temporibus, magni blanditiis totam voluptates minus fugit! Ipsa repellendus quaerat, debitis enim earum magnam, consequatur explicabo, rem esse nesciunt pariatur temporibus sunt, aperiam incidunt. Tempora totam, ea rerum sit. Cum, sequi, delectus? Perspiciatis voluptate sit repellendus architecto optio reprehenderit rem voluptatibus mollitia at cumque rerum voluptatem nesciunt aliquam, vero ad, repudiandae nisi quibusdam ex amet voluptates. Sed possimus maiores illum expedita doloribus ab pariatur accusamus eligendi quis veritatis ea et fuga reprehenderit dolores id quibusdam, optio itaque aut harum qui maxime sunt.', 'krug4.png');
@@ -64,9 +64,9 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `name`, `email`, `password`, `image`) VALUES
-(1, 'Boris Golubovic', 'golub0601@gmail.com', '123123321', 'admin_1'),
-(2, 'Aleksandar Golubovic', 'aleksandar11@gmail.com', 'sifrasifra', 'admin_2'),
-(3, 'Amplitudo Company', 'amplitudoinfo@amplitudo.me', 'password', 'admin_3');
+(1, 'Boris Golubovic', 'golub0601@gmail.com', '$2y$12$AOu3LYL07UvYO/2NCpgsG.3GmOTIUpx8rDgz/mD7h1FsdRzzLEVgO', 'admin_1'),
+(2, 'Aleksandar Golubovic', 'aleksandar11@gmail.com', '$2y$12$.4lAy4uBePYdsis6MxXrTu.u6Fls6HZb4dpiA1g2BiGvdLYasN03C', 'admin_2'),
+(3, 'Amplitudo Company', 'amplitudoinfo@amplitudo.me', '$2y$12$mc0AEhZzrGuleyIaZwUbnuAL5LSZu8zkKUDCPNrW6mOVNNwjoxYty', 'admin_3');
 
 -- --------------------------------------------------------
 
@@ -90,8 +90,7 @@ INSERT INTO `clients_imgs` (`id`, `company`, `image_source`) VALUES
 (3, 'GUNNIESS: MADE OF MORE ', 'client3.png'),
 (4, 'MAGNUM: MAGNUM X MOCHINO', 'client4.png'),
 (5, 'GULDEN\'S: #DEFENDTHEDOG', 'client5.png'),
-(6, 'TOBLERONE:THE TOBLERONE TAKE', 'client6.png'),
-(7, 'VOZDIZAJN1', 'VozDizajn.jpg');
+(6, 'TOBLERONE:THE TOBLERONE TAKE', 'client6.png');
 
 -- --------------------------------------------------------
 
@@ -142,10 +141,10 @@ INSERT INTO `meetings` (`id`, `name`, `company`, `email`, `phone_number`, `day`,
 (8, 'dfwsgsw fss', 'fwefwUU', 'sss@nsknfgs.com', '06812878477', '2018-07-23', '03:59:00', 'Aleksandar Golubovic'),
 (9, 'jdnsckscc nasfds', 'fwefwUU', 'golub0601@gmail.com', '698415133', '2018-09-22', '12:13:00', 'Aleksandar Golubovic'),
 (11, 'qdwqdwd', 'ddd', 'wdw@gmail.com', '068/589-905', '2018-07-22', '00:30:00', 'Aleksandar Golubovic'),
-(13, 'Golub', 'VozDizajn', 'golub0601@gmail.com', '068/589-905', '2018-07-22', '03:03:00', 'It is not taken'),
+(13, 'Golub', 'VozDizajn', 'golub0601@gmail.com', '068/589-905', '2018-07-22', '03:03:00', 'Amplitudo Company'),
 (20, 'Boris Golubovic', 'VozDizajn', 'golub0601@gmail.com', '068/589-905', '2018-09-22', '02:01:00', 'It is not taken'),
 (21, 'Boris Golubovic', 'VozDizajn', 'djukadjukic03@gmail.com', '06812878477', '2018-07-16', '01:00:00', 'It is not taken'),
-(22, '601U8', 'VozDizajn', 'aleksandar11@gmail.com', '068/589-905', '2018-07-22', '01:00:00', 'It is not taken'),
+(22, '601U8', 'VozDizajn', 'aleksandar11@gmail.com', '068/589-905', '2018-07-22', '01:00:00', 'Amplitudo Company'),
 (24, 'John Doe', 'fwefwUU', 'sss@nsknfgs.com', '06812878477', '2018-12-05', '14:56:00', 'It is not taken'),
 (25, 'PHP', 'VozDizajn', 'golub0601@gmail.com', '068/589-905', '2019-05-31', '02:32:00', 'It is not taken'),
 (26, 'Boris Golubovic', 'fwefwUU', 'djukadjukic03@gmail.com', '068/589-905', '2019-04-22', '02:21:00', 'It is not taken'),
@@ -168,20 +167,20 @@ CREATE TABLE `offices` (
 --
 
 INSERT INTO `offices` (`id`, `city`, `image_source`) VALUES
-(1, 'Belgrade', 'Belgrade.png'),
-(2, 'Brussels', 'brussels.jpg'),
-(3, 'Bucharest', 'bucharest.jpg'),
-(4, 'Dubai', 'dubai.jpg'),
-(5, 'Hamburg', 'Hamburg.jpg'),
-(6, 'Istanbul', 'Istanbul.jpg'),
-(7, 'London', 'london.jpg'),
-(8, 'Madrid', 'madrid.jpg'),
-(9, 'Milan', 'Milan.jpg'),
-(10, 'Moscow', 'moscow.jpg'),
-(11, 'Paris', 'paris.jpg'),
-(12, 'Podgorica', 'podgorica.png'),
-(13, 'Riga', 'riga.jpg'),
-(14, 'Stockholm', 'stockholm.jpg');
+(1, 'BELGRADE', 'Belgrade.png'),
+(2, 'BRUSSELS', 'brussels.jpg'),
+(3, 'BUCHAREST', 'bucharest.jpg'),
+(4, 'DUBAI', 'dubai.jpg'),
+(5, 'HAMBURG', 'Hamburg.jpg'),
+(6, 'ISTANBUL', 'Istanbul.jpg'),
+(7, 'LONDON', 'london.jpg'),
+(8, 'MADRID', 'madrid.jpg'),
+(9, 'MILAN', 'Milan.jpg'),
+(10, 'MOSCOW', 'moscow.jpg'),
+(11, 'PARIS', 'paris.jpg'),
+(12, 'PODGORICA', 'podgorica.png'),
+(13, 'RIGA', 'riga.jpg'),
+(14, 'STOCHOLM', 'stockholm.jpg');
 
 -- --------------------------------------------------------
 
@@ -270,7 +269,7 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `clients_imgs`
 --
 ALTER TABLE `clients_imgs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `imgs`

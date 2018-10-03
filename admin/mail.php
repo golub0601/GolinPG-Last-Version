@@ -1,6 +1,9 @@
 <?php include '../includes/db.php'; ?>
 <?php session_start(); ?>
 
+<?php if (isset($_SESSION['admin_name'])) {
+  
+?>
 
 <?php 
   if (isset($_GET['delete'])) {
@@ -160,3 +163,10 @@
     </section>
     <!-- /.content -->
 <?php include 'includes/footer.php'; ?>
+
+<?php 
+}
+else{
+  header('Location: ../login.php');
+}
+?>

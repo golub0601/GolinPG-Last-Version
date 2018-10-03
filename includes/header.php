@@ -14,8 +14,7 @@
   <head>
     <meta charset="utf-8">
     <title>GOLIN PG | <?php echo $titleOfPage; ?></title>
-    <meta name="description" content="The Project a Bootstrap-based, Responsive HTML5 Template">
-    <meta name="author" content="author">
+    <meta name="author" content="BorisGolubovic">
     <meta name="robots" content="noimageindex">
     <noscript>
       <META http-equiv="refresh" content="0;URL=js-error.html">
@@ -24,14 +23,10 @@
     <?php 
       use PHPMailer\PHPMailer\PHPMailer;
       use PHPMailer\PHPMailer\Exception;
-
-      // require 'includes/mail-src/Exception.php';
-      // require 'includes/mail-src/PHPMailer.php';
-      // require 'includes/mail-src/SMTP.php';
     ?>
     <!-- Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <!-- Login Page Style -->
+     <!-- Login Page Style 
     <link rel="stylesheet" href="includes/css_for_login.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> 
@@ -91,7 +86,7 @@
         <!-- classes:  -->
         <!-- "dark": dark version of header top e.g. class="header-top dark" -->
         <!-- ================ -->
-        <div class="header-top" style="background-color: #f2cd29;">
+        <div class="header-top" style="background-color: #f2cd29; border: none;">
           <div class="container">
             <div class="row">
               <div class="col-2 col-md-5">
@@ -124,7 +119,7 @@
 
         <!-- header start -->
         
-        <header class="header dark fixed fixed-desktop clearfix">
+        <header class="p-0 header fixed fixed-desktop clearfix" style="background-color: black; border: none;">
           <div class="container">
             <div class="row">
               <div class="col-md-auto hidden-md-down pl-3">
@@ -133,8 +128,8 @@
                 <div class="header-first">
 
                   <!-- logo -->
-                  <div id="log" class="lo">
-                    <a href="index.php"><img id="logo_img" src="img/Logo GolinPG.svg" alt="" style="width: 200px; height: 80px;"></a>
+                  <div id="log" class="lo m-0">
+                    <a href="index.php"><img id="logo_img" src="img/Logo GolinPG.svg" alt="" style="padding-top: 0px; width: 200px; height: 60px;"></a>
                   </div>
 
                   
@@ -172,27 +167,27 @@
                     </button>
 
                     <div class="collapse navbar-collapse link_nav" id="navbar-collapse-1">
-                      <ul class="navbar-nav ml-xl-auto" style="padding: 20px; margin-top: 20px; padding-right: 0px;">
+                      <ul class="navbar-nav ml-xl-auto" style="padding: 20px; padding-right: 0px;">
                           <li class="nav-item">
-                          <a class="link_nav" style="font-size:12px;" href="index.php#PREM">PR AND COMUNICATIONS</a>
+                          <a class="montExtraBold link_nav" style="font-size:12px;" href="index.php#PREM">PR AND COMUNICATIONS</a>
                           </li>
                           <li class="nav-item">
-                          <a  style="font-size:12px;" class="link_nav" href="index.php#EM">EVENT MANAGMENT</a>
+                          <a  style="font-size:12px;" class="montExtraBold link_nav" href="index.php#EM">EVENT MANAGMENT</a>
                           </li>
                           <li class="nav-item">
-                          <a class="link_nav"  style="font-size:12px;" href="index.php#CL">CLIENTS</a>
+                          <a class="link_nav montExtraBold"  style="font-size:12px;" href="index.php#CL">CLIENTS</a>
                           </li>
                           <li class="nav-item">
-                          <a style="font-size:12px;" class="link_nav" href="index.php#AU">ABOUT US</a>
+                          <a style="font-size:12px;" class="montExtraBold link_nav" href="index.php#AU">ABOUT US</a>
                           </li>
                           <li class="nav-item">
-                          <a class="link_nav" style="font-size:12px;" href="index.php#OFF">OFFICES</a>
+                          <a class="montExtraBold link_nav" style="font-size:12px;" href="index.php#OFF">OFFICES</a>
                           </li>
                           <li class="nav-item">
-                          <a class="link_nav" style="font-size:12px;" href="index.php#CONT">CONTACT US</a>
+                          <a class="montExtraBold link_nav" style="font-size:12px;" href="index.php#CONT">CONTACT US</a>
                           </li>
                           <li class="nav-item">
-                          <a class="link_nav" style="font-size:12px;" href="login.php">LOGIN</a>
+                          <a class="montExtraBold link_nav" style="font-size:12px;" href="login.php">LOGIN</a>
                           </li>
                       </ul>
                     </div>

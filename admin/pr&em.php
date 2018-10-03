@@ -2,6 +2,10 @@
 <?php session_start(); ?>
 <?php ob_start(); ?>
 
+<?php if (isset($_SESSION['admin_name'])) {
+  
+?>
+
 
 <?php include 'includes/head.php'; ?>
 <title>Admin GolinPG | CLIENTS</title>
@@ -72,6 +76,33 @@
     
     
     <section class="content container-fluid">
+      <?php if(isset($_GET['edited']) && ($_GET['edited']==1)){
+        echo '<div class="alert alert-success alert-dismissible fade in" style="margin:20px; margin-right:120px; margin-left: -10px;">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                 Section has been edited.
+              </div>';
+     }
+     if(isset($_GET['edited']) && ($_GET['edited']==0)){
+      if($_GET['err']=='notimg'){
+            echo '<div class="alert alert-danger alert-dismissible fade in" style="margin:20px; margin-right:120px; margin-left:120px;">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                 That image is not png, jpg, gif or jpeg!
+              </div>';    
+        }
+        if($_GET['err']=='big'){
+            echo '<div class="alert alert-danger alert-dismissible fade in" style="margin:20px; margin-right:120px; margin-left:120px;">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                 Image is too big. Please use another image.
+              </div>';    
+        }
+        if($_GET['err']=='exist'){
+            echo '<div class="alert alert-danger alert-dismissible fade in" style="margin:20px; margin-right:120px; margin-left:120px;">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                 That name of image alredy exist.Please use another image or name.
+              </div>';    
+        }
+     }
+?>
           <div class="box-body">
               <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
                 <div class="row">
@@ -124,3 +155,12 @@
     </section>
     <!-- /.content -->
  <?php include 'includes/footer.php'; ?>
+
+
+<?php 
+}
+else{
+  header('Location: ../login.php');
+}
+?>
+

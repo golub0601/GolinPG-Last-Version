@@ -16,32 +16,19 @@
   
   if(isset($_POST['add_office'])){
   	if (!$check) {
-  		// echo "NOT an IMAGE!" ;
-  		echo " <script>
-				 alert('That is not an Image!');
-				 window.location.href='../offices.php';
-			   </script>";
+  		header('Location:  ../offices.php?added=0&err=noimg');
   	}
   	else{
   		if (file_exists($target_path)) {
-    echo " <script>
-				 alert('That name of image exist! Change name or check does that client alredy exist.');
-				 window.location.href='../offices.php';
-		   </script>";
+    header('Location:  ../offices.php?added=0&err=exist');
         }
         else{
         	if ($_FILES["office_image"]["size"] > 1000000) {
-        echo "<script>
-				 alert('That image is too big!');
-				 window.location.href='../offices.php';
-		   </script>";
+        header('Location:  ../offices.php?added=0&err=big');
             } 
             else{
                  if($fileType != "jpg" && $fileType != "png" && $fileType != "jpeg" && $fileType != "gif" ) {
-				    echo "<script>
-								 alert('That image is not png, jpg, gif or jpeg!');
-					             window.location.href='../offices.php';			 
-						   </script>";
+				    header('Location:  ../offices.php?added=0&err=notimg');
 				    
 				}
 				else{
@@ -53,10 +40,7 @@
             if(!$send_query){
               die(mysqli_error($coonnection));
             }
-						echo "<script>
-									 alert('OFFICE HAS BEEN ADDED!');
-									 window.location.href='../offices.php';
-							   </script>";
+						header('Location:  ../offices.php?added=1');
                  
 							   
 				}
